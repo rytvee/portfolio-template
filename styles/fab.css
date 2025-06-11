@@ -1,0 +1,113 @@
+.fab-wrapper {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+}
+.fab-btn {
+        background-color: brown;
+        color: white;
+        font-size: 16px;
+        width: 100%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 0 10px;
+        border-radius: 20px;
+}
+.fab-btn span, .fab-dropdown a span {
+        padding-left: 10px;
+}
+.fab-dropdown {
+        position: absolute;
+        bottom: 50px;
+        width: 160px;
+        border-radius: 10px;
+        display: none;
+        flex-direction: column;
+        background: #dfcfcf;
+        padding-top: 10px;
+        
+}
+.fab-dropdown a {
+        text-decoration: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 30px;
+        padding: 0 10px;
+        margin-bottom: 10px;
+}
+
+.fab-dropdown a i {
+        border: 1px ;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: brown;
+    }
+.fab-dropdown a span {
+    color: black;
+        justify-content: left;
+}
+.fab-dropdown a span:hover {
+       color: brown;
+     
+}
+
+
+ #fab-toggle:checked + .fab-btn + .fab-dropdown {
+        display: block;
+    }
+    
+@media screen and (max-width: 480px) {
+
+    .fab-wrapper {
+        position: fixed;
+        bottom: 30px;
+        right: 20px;
+}
+
+    .fab-btn {
+        background-color: brown;
+        color: aliceblue;
+        text-align: center;
+        font-size: 20px;
+        width: 20px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    .fab-dropdown {
+        bottom: 40px;
+        background: #dfcfcf00;
+    }
+    .fab-dropdown a i {
+        border: 0px;
+        border-radius: 0%;
+        width: 0px;
+        height: 0px;
+    }
+    .fab-dropdown a {
+        border-radius: 50%;
+        width: 10px;
+        height: 30px;
+        margin-left: 3px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: brown;
+    }
+    .fab-dropdown a:hover {
+        background-color: rgb(239, 140, 140);
+    }
+    .fab-btn span, .fab-dropdown a span {
+        display: none;
+    }
+   
+}
