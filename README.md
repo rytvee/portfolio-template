@@ -1,4 +1,4 @@
-# weatherapp
+# Portfolio Landing Page
 
 A sample porfolio landing page built with HTML and JavaScript
 
