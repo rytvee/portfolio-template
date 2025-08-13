@@ -22,7 +22,9 @@ You can visit directly from your browser:
 portfolio-template/
 │
 ├── index.html    # Main HTML page
-├── style.css     # Stylesheet
+├── css/          # Stylesheet
+│ ├── fab.css     # Floating action button styling
+│ └── styles.css  # Main styling
 ├── script.js     # JavaScript functionality
 ├── images/       # Project images & icon
 └── README.md     # Project documentation
