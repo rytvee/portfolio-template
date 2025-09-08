@@ -25,7 +25,8 @@ portfolio-template/
 ├── css/          # Stylesheet
 │ ├── fab.css     # Floating action button styling
 │ └── styles.css  # Main styling
-├── script.js     # JavaScript functionality
+├── js/           # JavaScript
+│ ├── script.js   # Mobile-menu & year functionality
 ├── images/       # Project images & icon
 └── README.md     # Project documentation
 ```
