@@ -6,14 +6,6 @@
   -webkit-touch-callout: none; /* Remove blue tap highlight on iOS long-press menu */
 }
 
-/* Remove focus outlines for inputs/buttons */
-input:focus,
-button:focus,
-.custom-calendar-icon:focus {
-  outline: none;
-  box-shadow: none;
-}
-
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
