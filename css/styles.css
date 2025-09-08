@@ -1,47 +1,47 @@
 /* Base Styles */
-body {
+* {
+      margin: 0;
+      padding: 0;
+    }
+    body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
-}
-header, section, footer {
-    overflow: hidden;
 }
 
 /* Header & Navigation */
-header {
-    color: #333;
-    border-bottom: 1px solid #eee;
-    align-items: center;
+    header {
+      background: #fff;
+      color: #333;
+      padding: 10px 20px;
+      position: relative;
+      z-index: 1000;
+      border-bottom: 1px solid #eee;
 }
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    display: flex;
-}
-.logo img {
-    width: 50px;
-    position: relative;
-    top: -10px;
-}
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-nav ul li {
-    margin-left: 20px;
-}
-nav ul li a {
-    text-decoration: none;
+
+    .container.menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 40px;
+      margin-right: 10px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: 500;
     color: #555;
     transition: color 0.3s ease;
 }
@@ -49,18 +49,30 @@ nav ul li a:hover {
     color: #007bff;
 }
 
-/* Containers */
-.container,
-.hero-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
+    /* Mobile menu styles */
+    nav ul {
+      transition: max-height 0.5s ease, background 0.5s ease;
+      overflow: hidden;
+    }
+
+        /* Hamburger button */
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      color: white;
+      cursor: pointer;
+    }
+
 
 /* Hero Section */
 .hero {
     background-color: #e9ecef;
     margin-bottom: -4px;
+}
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 .hero .hero-container {
     display: flex;
@@ -104,6 +116,13 @@ nav ul li a:hover {
 }
 .btn:hover {
     background-color: #0056b3;
+}
+
+/* Container format */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* About Section */
@@ -163,8 +182,6 @@ nav ul li a:hover {
     gap: 30px;
 }
 .product {
-    width: 320px;
-    margin: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -270,6 +287,41 @@ footer {
     font-size: 0.9em;
 }
 
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.8); /* transparent bg */
+    backdrop-filter: blur(6px);
+    max-height: 0; /* collapsed */
+    opacity: 0; /* hidden */
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.4s ease;
+  }
+
+  nav ul li {
+    padding: 15px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: #333; /* dark so it shows on white header */
+  }
+
+  nav ul.show {
+    max-height: 400px; /* expanded height */
+    opacity: 1; /* visible */
+  }
+}
+
+
 /* Responsive Design */
 @media (max-width: 670px) {
     .products-list {
@@ -291,10 +343,6 @@ footer {
     .hero-image img {
         max-width: 100%;
     }
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
     nav ul li {
         margin: 10px 0;
     }
@@ -315,9 +363,6 @@ footer {
         margin-top: 50px;
         text-align: justify;
     }
-}
-
-@media (max-width: 300px) {
     .skills-list,
     .products-list {
         display: flex;
