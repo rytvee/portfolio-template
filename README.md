@@ -34,7 +34,7 @@ portfolio-template/
 ## 🚀 Getting Started
 - Clone the repository
 ```
-git clone https://github.com/yourusername/one-page-portfolio.git
+git clone https://github.com/rytvee/portfolio-template.git
 cd portfolio-template
 ```
 - Open `index.html`, or use a local server like Live Server in VS Code.
